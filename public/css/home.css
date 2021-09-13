@@ -1,0 +1,168 @@
+body {
+    font-family: 'Merienda', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-container {
+    height: 400px;
+    color: #2e2e2f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    font-size: 5em;
+}
+
+.text-special {
+  /* Fallback: Set a background color. */
+  background-color: red;
+  
+  /* Create the gradient. */
+  background-image: linear-gradient(90deg, rgba(229,52,69,1) 20%, rgba(253,183,68,1) 81%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.new-releases-title-container {
+    text-align: center;
+    color: #2e2e2f;
+}
+
+.newProducts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+
+.new-releases-item-container {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+
+    height: 300px;
+}
+
+.item-images {
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+
+.new-releases-showAll-container {
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+}
+
+.showAll {
+    color: black;
+    padding: 18px 36px;
+    letter-spacing: 1px;
+    transition: color ease-out 0.4s;
+
+}
+
+.showAll:hover {
+    color: #e43344;
+}
+
+.new-releases-product-name {
+    font-size: 1.3em;
+}
+
+.new-releases-product-name a {
+    text-decoration: none;
+    color: black;
+}
+
+.new-releases-product-name a:hover {
+    color: #e43344;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.customer-reviews-container-1 {
+    background-image: linear-gradient(90deg, rgba(229,52,69,1) 20%, rgba(253,183,68,1) 81%);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0px 20px 0px;
+    font-size: 1.5em;
+}
+
+.customer-review-1 {
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "news-item-1   news-item-2    news-item-3";
+}
+
+.news-item-1 {
+    grid-area: news-item-1;
+}
+
+.news-item-2 {
+    grid-area: news-item-2;
+}
+
+.news-item-3 {
+    grid-area: news-item-3;
+}
+
+.news-item {
+    padding: 20px 5px 20px 5px;
+}
+
+.footer-container {
+
+    background-image: linear-gradient(90deg, rgba(229,52,69,1) 20%, rgba(253,183,68,1) 81%);
+    color: white;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "footer-about   footer-links    footer-cs";
+}
+
+.footer-about {
+    grid-area: footer-about;
+}
+
+.footer-links {
+    grid-area: footer-links;
+}
+
+.footer-cs {
+    grid-area: footer-cs;
+}

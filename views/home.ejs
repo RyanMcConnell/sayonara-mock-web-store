@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--PERSONAL STYLESHEET-->
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <title>Sayonara - The Official Clothing Brand for Innovators | Home</title>
+</head>
+
+<!--MAKE CHECKOUT BUTTON UNAVAILABLE-->
+
+<body>
+
+    <!--DONT TAKE THIS NAVBAR OUT BECAUSE IT INCLUDES A STICKY-TOP-->
+    <div class="onsale-container">
+        <p class="onsale-text">All Shirts - 50% OFF!</p>
+    </div>
+
+    <div class="navbar-main sticky-top">
+        <div class="navbar-personal">
+            <ul>
+                <li><a href="">Log-In</a></li>
+                <li><a href="">Cart</a></li>
+            </ul>
+        </div>
+        <div class="navbar-title">
+            <!--MAKE A LOGO FOR THIS -> MY ONE I ALREADY HAVE ON IPAD?-->
+            <h1><a href="/">Sayonara</a></h1>
+            <p>A Clothing Brand for Innovators.</p>
+        </div>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="/shop">All Apparel</a></li>
+                <li><a href="/shop">Shirts</a></li>
+                <li><a href="/shop">Shorts</a></li>
+                <li><a href="/shop">Jackets</a></li>
+                <li><a href="/shop">Hats</a></li>
+                <li><a href="/shop">Sale</a></li>
+                <li><a href="">News</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <h1 class="hero-text">A Clothing brand for <span class="text-special">Innovators</span>.</h1>
+    </div>
+
+    <div class="new-releases-container">
+        <div class="new-releases-title-container">
+            <h2 class="new-releases-title">New Arrivals</h2>
+        </div>
+        <div class="newProducts">
+            <% for(let product of allProducts) { %>
+                <div class="new-releases-item-container">
+                    <img src="/images/<%= product.imageKey %>.png" class="item-images">
+                    <h3 class="new-releases-product-name">
+                        <a href="/shop/item/<%= product._id %>"> 
+                            <%= product.name %>
+                        </a>
+                    </h3>
+                    <p class="new-releases-product-price">
+                        $<%= product.price %>
+                    </p>
+                </div>
+                <% } %>
+        </div>
+        <div class="new-releases-showAll-container">
+            <a href="/shop" class="showAll">Show All</a>
+        </div>
+    </div>
+
+    <div class="customer-reviews-container-1">
+        <p class="customer-review-1">“GOT MY ITEMS WAY SOONER THAN I EXPECTED AND WAS THRILLED WITH MY ORDER. MATERIAL WAS GOOD, DESIGN WAS FLAWLESS AND THE FIT WAS JUST RIGHT. DEFINITELY GONNA BE ORDERING AGAIN!!!”<sub>- John Smith</sub></p>
+    </div>
+
+    <!--ADD MEDIA QUERIES TO THIS FOR SMALL RESOLUTIONS-->
+    <div class="news-container">
+        <div class="news-item news-item-1">
+            <!--IMAGE WILL GO HERE-->
+            <h3 class="news-item-title">'Sayonara' online store goes live!</h3>
+            <p class="news-item-summary">The new online clothing brand 'Sayonara' officially launches on August 25th, 2021.</p>
+            <a href="">Read More</a>
+        </div>
+        <div class="news-item news-item-2">
+            <!--IMAGE WILL GO HERE-->
+            <h3 class="news-item-title">nfjdsknfsdjknfdsosdfsdfsgf</h3>
+            <p class="news-item-summary">I will put something here eventually when I think of something silly!</p>
+            <a href="">Read More</a>
+        </div>
+        <div class="news-item news-item-3">
+            <!--IMAGE WILL GO HERE-->
+            <h3 class="news-item-title">'Sayonara' online store goes live!</h3>
+            <p class="news-item-summary">I will put something here eventually when I think of something silly!</p>
+            <a href="">Read More</a>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-about">
+            <h4 class="footer-about-title">About Our Store</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus nihil porro, aliquid dolores amet explicabo laborum rem voluptatum! Aliquid repellat ea expedita saepe omnis cupiditate perspiciatis rerum pariatur aperiam amet!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum obcaecati repellat ad quos aliquam ipsum, natus velit explicabo dicta, officiis reiciendis! Nesciunt quasi quas voluptatem, excepturi repudiandae quisquam dignissimos!</p>
+        </div>
+        <div class="footer-links">
+            <h4 class="footer-links-title">Links</h4>
+        </div>
+        <div class="footer-cs">
+            <h4 class="footer-cs-title">Customer Service</h4>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

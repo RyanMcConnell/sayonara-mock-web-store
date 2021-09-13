@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--PERSONAL STYLESHEET-->
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/shop.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <title>Sayonara - The Official Clothing Brand for Innovators | Shop</title>
+</head>
+
+<body>
+
+    <%- include('../partials/navbar'); %>
+
+    <div class="sidebar">
+        <div class="category sidebar-item">
+            <h2 class="category-title sidebar-title">Categories</h2>
+            <div class="category-item">
+                <input type="checkbox" id="category-tshirt" onclick="">
+                <label for="category-tshirt">T-Shirts</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="category-pants" onclick="">
+                <label for="category-pants">Pants</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="category-jacket" onclick="">
+                <label for="category-jacket">Jackets</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="category-hat" onclick="">
+                <label for="category-hat">Hats</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="category-other" onclick="">
+                <label for="category-other">Other</label>
+            </div>
+        </div>
+        <hr>
+        <div class="size sidebar-item">
+            <h2 class="size-title sidebar-title">Size</h2>
+            <div class="size-item">
+                <input type="checkbox" id="size-small" onclick="">
+                <label for="size-small">S</label>
+            </div>
+            <div class="size-item">
+                <input type="checkbox" id="size-medium" onclick="">
+                <label for="size-medium">M</label>
+            </div>
+            <div class="size-item">
+                <input type="checkbox" id="size-large" onclick="">
+                <label for="size-large">L</label>
+            </div>
+            <div class="size-item">
+                <input type="checkbox" id="size-xlarge" onclick="">
+                <label for="size-xlarge">XL</label>
+            </div>
+            <div class="size-item">
+                <input type="checkbox" id="size-xxlarge" onclick="">
+                <label for="size-xxlarge">XXL</label>
+            </div>
+        </div>
+        <hr>
+        <div class="price sidebar-item">
+            <h2 class="price-title sidebar-title">Price</h2>
+            <div class="price-item">
+                <input type="checkbox" id="price-0-5" onclick="">
+                <label for="price-0-5">$0 - $4.99</label>
+            </div>
+            <div class="price-item">
+                <input type="checkbox" id="price-5-10" onclick="">
+                <label for="price-5-10">$5.00 - $9.99</label>
+            </div>
+            <div class="price-item">
+                <input type="checkbox" id="price-10-20" onclick="">
+                <label for="price-10-20">$10.00 - $19.99</label>
+            </div>
+            <div class="price-item">
+                <input type="checkbox" id="price-20-35" onclick="">
+                <label for="price-20-35">$20.00 - $34.99</label>
+            </div>
+            <div class="price-item">
+                <input type="checkbox" id="price-35-up" onclick="">
+                <label for="price-35-up">+ $35.00</label>
+            </div>
+        </div>
+
+        <div class="query-button-container">
+            <button type="submit" onclick="" class="query-search">Submit</button>
+        </div>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="products-container">
+            <% for(let product of allProducts) { %>
+                <div class="item-container">
+                    <img src="/images/<%= product.imageKey %>.png" class="item-images">
+                    <div>
+                        <a href="/shop/item/<%= product._id %>" class="item-name">
+                            <%= product.name %>
+                        </a>
+                        <p class="item-price">
+                            $<%= product.price %>
+                        </p>
+                    </div> 
+                </div>
+                <% } %>
+        </div>
+    </div>
+
+</body>
+</html>
