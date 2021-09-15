@@ -61,19 +61,31 @@
             <h2 class="new-releases-title">New Arrivals</h2>
         </div>
         <div class="newProducts">
+
+            <% let counter = 0 %>
+
             <% for(let product of allProducts) { %>
-                <div class="new-releases-item-container">
-                    <img src="/images/<%= product.imageKey %>.png" class="item-images">
-                    <h3 class="new-releases-product-name">
-                        <a href="/shop/item/<%= product._id %>">
-                            <%= product.name %>
-                        </a>
-                    </h3>
-                    <p class="new-releases-product-price">
-                        $<%= product.price %>
-                    </p>
-                </div>
+
+                <% if (counter <= 5) { %>
+
+                    <div class="new-releases-item-container">
+                        <img src="/images/<%= product.imageKey %>.png" class="item-images">
+                        <h3 class="new-releases-product-name">
+                            <a href="/shop/item/<%= product._id %>">
+                                <%= product.name %>
+                            </a>
+                        </h3>
+                        <p class="new-releases-product-price">
+                            $<%= product.price %>
+                        </p>
+                    </div>
                 <% } %>
+
+                <% counter += 1 %>
+                <!--TESTING-->
+                <% console.log(counter) %>
+            <% } %>
+
         </div>
 
         <div class="new-releases-showAll-container">
