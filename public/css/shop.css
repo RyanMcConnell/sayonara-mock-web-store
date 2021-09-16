@@ -3,7 +3,6 @@
     float: left;
     width: 20%;
     height: 100%;
-    background-color: rgba(252, 183, 67, 0.5)
 }
 
 .products-container {
@@ -13,9 +12,8 @@
 
 .item-container {
     height: 300px;
-    background-color: cadetblue;
 
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     display: block;
 }
