@@ -10,11 +10,16 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--PERSONAL STYLESHEET-->
     <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/home.css">
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="shortcut icon" type="image/jpg" href="/images/products/sayonara-sticker-collection-1.png" />
+    <!--ANIMATIONS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Sayonara - The Official Clothing Brand for Innovators | Home</title>
 </head>
 
@@ -52,7 +57,7 @@
         </div>
     </div>
 
-    <div class="hero-container">
+    <div class="hero-container" data-aos="fade-up">
         <h1 class="hero-text">A Clothing brand for <span class="text-special">Innovators</span>.</h1>
     </div>
 
@@ -62,29 +67,29 @@
         </div>
         <div class="newProducts">
 
-            <% let counter = 0 %>
+            <% let counter=0 %>
 
-            <% for(let product of allProducts) { %>
+                <% for(let product of allProducts) { %>
 
-                <% if (counter <= 5) { %>
+                    <% if (counter <=5) { %>
 
-                    <div class="new-releases-item-container">
-                        <img src="/images/products/<%= product.imageKey %>.jpg" class="item-images">
-                        <h3 class="new-releases-product-name">
-                            <a href="/shop/item/<%= product._id %>">
-                                <%= product.name %>
-                            </a>
-                        </h3>
-                        <p class="new-releases-product-price">
-                            $<%= product.price %>
-                        </p>
-                    </div>
-                <% } %>
+                        <div class="new-releases-item-container" data-aos="fade-up">
+                            <img src="/images/products/<%= product.imageKey %>.jpg" class="item-images">
+                            <h3 class="new-releases-product-name">
+                                <a href="/shop/item/<%= product._id %>">
+                                    <%= product.name %>
+                                </a>
+                            </h3>
+                            <p class="new-releases-product-price">
+                                $<%= product.price %>
+                            </p>
+                        </div>
+                        <% } %>
 
-                <% counter += 1 %>
-                <!--TESTING-->
-                <% console.log(counter) %>
-            <% } %>
+                            <% counter +=1 %>
+                                <!--TESTING-->
+                                <% console.log(counter) %>
+                                    <% } %>
 
         </div>
 
@@ -122,29 +127,18 @@
         </div>
     </div>
 
-    <div class="footer-container">
-        <div class="footer-about">
-            <h4 class="footer-about-title">About Our Store</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus nihil porro, aliquid dolores amet
-                explicabo laborum rem voluptatum! Aliquid repellat ea expedita saepe omnis cupiditate perspiciatis rerum
-                pariatur aperiam amet!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum obcaecati repellat ad quos aliquam
-                ipsum, natus velit explicabo dicta, officiis reiciendis! Nesciunt quasi quas voluptatem, excepturi
-                repudiandae quisquam dignissimos!</p>
-        </div>
-        <div class="footer-links">
-            <h4 class="footer-links-title">Links</h4>
-        </div>
-        <div class="footer-cs">
-            <h4 class="footer-cs-title">Customer Service</h4>
-        </div>
+    <%- include('../partials/footer'); %>
 
-    </div>
-
-
+    <!--BOOSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+    </script>
+    <!--ANIMATIONS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

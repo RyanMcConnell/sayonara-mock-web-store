@@ -10,11 +10,14 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--PERSONAL STYLESHEET-->
     <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/shop.css">
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="shortcut icon" type="image/jpg" href="/images/products/sayonara-sticker-collection-1.png"/>
     <title>Sayonara - The Official Clothing Brand for Innovators | Shop</title>
 </head>
 
@@ -106,7 +109,7 @@
         <div class="products-container">
             <% for(let product of allProducts) { %>
                 <div class="item-container">
-                    <img src="/images/products/<%= product.imageKey %>.jpg" class="item-images">
+                    <img src="/images/products/<%= product.imageKey %>.png" class="item-images">
                     <div>
                         <a href="/shop/item/<%= product._id %>" class="item-name">
                             <%= product.name %>
@@ -118,7 +121,10 @@
                 </div>
                 <% } %>
         </div>
+        
     </div>
+
+    <%- include('../partials/footer'); %>
 
 </body>
 </html>

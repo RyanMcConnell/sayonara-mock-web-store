@@ -72,11 +72,12 @@ app.get("/shop" , async (req, res) => {
 app.get("/shop/item/:id" , async (req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id)
+    const allProducts = await Product.find({})
     // TESTING PURPOSES
     console.log(`Name: ${product.name}`)
     console.log(`ID: ${product.id}`);
     console.log(`Onsale: ${product.onSale}`)
     console.log(`imageKey: ${product.imageKey}`)
     console.log("It worked! Sent to /item")
-    res.render("item" , { product })
+    res.render("item" , { product, allProducts })
 })

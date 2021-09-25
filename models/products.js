@@ -31,6 +31,10 @@ const productSchema = new mongoose.Schema({
     },
     imageKey: {
         type: String
+    }, 
+    collectionGroup: {
+        type: Number,
+        required: true
     }
 })
 
